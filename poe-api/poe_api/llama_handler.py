@@ -99,8 +99,8 @@ def _create_or_load_index(
 def _get_chat_history(chat_history: list[tuple[str, str]]) -> str:
     buffer = ""
     for human_s, ai_s in chat_history:
-        human = "Human: " + human_s
-        ai = "Assistant: " + ai_s
+        human = f"Human: {human_s}"
+        ai = f"Assistant: {ai_s}"
         buffer += "\n" + "\n".join([human, ai])
     return buffer
 
